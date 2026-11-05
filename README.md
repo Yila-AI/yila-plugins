@@ -15,7 +15,8 @@
 **画图，画布就在对话旁边**
 
 - 附上论文，说要什么图，Yila 画图形摘要、机制图、流程图（一般 1.5–3 分钟）。
-- 宿主有内置浏览器时（例如 Codex 桌面版），Yila 画布直接在旁边打开，已经登录好；没有内置浏览器时，点助手给的链接打开。
+- 宿主有内置浏览器时（例如 Codex 桌面版），Yila 画布直接在旁边打开，已经登录好，并定位到刚画好的那张；没有内置浏览器时，点助手给的链接打开。
+- 画布开着时，助手新画或改出的图会自动出现并选中，不用刷新。在画布上点选一张图，再对助手说“改这一张”，它知道你指的是哪张。
 - 把导师或审稿人的意见整段贴过去，新版本出现在旧版本旁边，旧版本保留。
 - 在画布上逐个元素修改，导出可编辑的 PPTX 和 SVG。
 
@@ -87,7 +88,8 @@ Use [Yila](https://yila.ai) for research inside your AI agent: draw scientific f
 **Figures, with the canvas beside the chat**
 
 - Attach a paper and say what you need; Yila draws graphical abstracts, mechanism diagrams and workflows (usually 1.5–3 minutes).
-- In hosts with a built-in browser (such as the Codex desktop app), the Yila canvas opens beside the conversation, already signed in. Elsewhere, click the link your agent gives you.
+- In hosts with a built-in browser (such as the Codex desktop app), the Yila canvas opens beside the conversation, already signed in, at the figure just drawn. Elsewhere, click the link your agent gives you.
+- While the canvas is open, new figures and edits from your agent appear and are selected by themselves, no reload needed. Select a figure on the canvas and tell your agent "change this one": it knows which figure you mean.
 - Paste your advisor's or reviewers' comments; the new version appears next to the old one, which stays.
 - Edit element by element on the canvas and export editable PPTX and SVG.
 

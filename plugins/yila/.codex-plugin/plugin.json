@@ -1,6 +1,6 @@
 {
   "name": "yila",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Draw and revise scientific figures on the Yila canvas, search, check and format scholarly literature, and hand whole research jobs to Yila, inside your agent.",
   "author": {
     "name": "Yila AI"

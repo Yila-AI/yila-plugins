@@ -7,18 +7,26 @@ description: Open a Yila project and its figure canvas in the host's built-in br
 
 ## Open
 
-Call `yila_open_in_browser` with the `figure_id` (or the `project_id`). It returns a link that signs the browser in to the user's Yila account once and opens the project's canvas, where every figure of the project is laid out. The link works once and expires in about 5 minutes.
+Call `yila_open_in_browser` with the `figure_id` (or the `project_id`). It returns a link that signs the browser in to the user's Yila account once and opens the project's canvas at that figure, where every figure of the project is laid out. The link works once and expires in about 5 minutes.
 
 - If the host has a built-in browser, open the link there.
 - Otherwise give the link to the user right away and ask them to click it.
 - Do not fetch the link with HTTP or shell tools: that uses it up without showing anything.
 - If the page asks the user to sign in, the link expired or was already used: request a new one.
 
-After every new figure or revision, open a new link: a page that is already open does not refresh by itself.
+A canvas opened from that link keeps showing the project's new figures and revisions by itself and moves to each new one while it stays open. Open a new link only if the user closed it.
 
 ## "Change this one"
 
-Use the `figure_id` of the figure the user means: the one you just made or revised, or one from `yila_job_list`. If it is unclear which figure they mean, ask; do not guess.
+When the user points at a figure on the canvas ("this one", "the selected one"), read the page before editing. In the built-in browser, read the hidden element:
+
+```
+document.getElementById("yila-agent-state").textContent
+```
+
+It is JSON: `project`, `selected` (the figure the user selected or enlarged: `figure` id, `title`, `isLatest`), `latest` and `figures` (all figures on the canvas, newest last). Each figure on the canvas also carries its id in `data-yila-figure-id`. Edit that figure with `yila_figure_edit`.
+
+If you cannot read the page, use the figure you just made or revised, or one from `yila_job_list`, only when it is clearly the one the user means; otherwise ask. Do not guess.
 
 ## What stays on the canvas
 
