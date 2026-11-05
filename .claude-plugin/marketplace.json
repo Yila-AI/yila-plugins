@@ -8,7 +8,7 @@
     {
       "name": "yila",
       "source": "./plugins/yila",
-      "description": "Search, read and verify papers, format references, and draw editable scientific figures with Yila."
+      "description": "Draw scientific figures with Yila and edit them on the Yila canvas beside the conversation. Literature tools are coming soon."
     }
   ]
 }

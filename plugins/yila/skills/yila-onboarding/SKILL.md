@@ -5,29 +5,22 @@ description: Connect to Yila and introduce what it can do. Use when the user ins
 
 # Start with Yila
 
-Use only this plugin's `yila` MCP connection. If the tools are missing because the connection is not authorized yet, start the host's own sign-in flow for the `yila` server and wait for the user to approve it in the browser. Never ask the user for a password, an API key or a token.
+Use only this plugin's `yila` MCP connection. If its tools are missing because the connection is not authorized yet, start the host's own sign-in flow for the `yila` server and wait for the user to approve it in the browser. Never ask the user for a password, an API key or a token.
 
 ## First call
 
-Call `yila_get_orientation` once per conversation before any other Yila tool. It returns:
-
-- the connected Yila account and its credit balance;
-- the user's recent Yila projects (each project is a task in the user's Yila account, with its own canvas, papers and notes);
-- when to use each tool, how to cite papers, and how to link the user back to the Yila web app.
-
-Follow what it says. If it returns `NOT_AUTHORIZED`, run the sign-in flow again.
+Call `yila_get_orientation` once per conversation before any other Yila tool. It returns the connected Yila account, its credit balance, the user's recent Yila projects and the manual: which tool to use when, what costs credits and how to open the Yila canvas. Follow it. If the connection is refused, run the sign-in flow again.
 
 ## Introduce Yila
 
-Introduce Yila in the user's language, briefly, with these two parts and nothing invented:
+Introduce Yila in the user's language, briefly, and invent nothing:
 
-1. **Figures with a canvas beside the chat.** Yila draws publication-ready scientific figures (graphical abstracts, mechanism diagrams, flowcharts) from the user's paper or notes. The editable Yila canvas opens beside the conversation. The user can paste reviewer or advisor feedback and get a new version next to the old one, then export editable PPTX or SVG.
-2. **A research workbench behind the agent.** Deep literature search across English and Chinese sources (including Wanfang), full-text reading with page citations, reference verification (real, mismatched or not found), references in 2,800+ styles including GB/T 7714, and a library and notes that stay in the user's Yila account.
+- **Scientific figures with the canvas beside the chat.** Yila draws publication-quality figures (graphical abstracts, mechanism diagrams, workflows) from the outline you write after reading the user's paper or notes. The figures are saved in the user's Yila project, and the editable Yila canvas opens in the host's built-in browser, already signed in. The user can paste an advisor's or reviewer's comments and get a new version next to the old one, then export editable PPTX or SVG on the canvas.
+- **Coming soon:** literature search across English and Chinese sources, full-text reading, citation checks and reference formatting. Do not offer them yet.
 
-Then offer two or three starter requests that fit the user's field, for example:
+Then offer two starter requests that fit the user's field, for example:
 
 - "Read the attached paper and draw a 16:9 graphical abstract with Yila."
-- "Use Yila to run a deep search on <topic>, including Chinese papers."
-- "Check every reference in this draft with Yila and format them in GB/T 7714."
+- "Revise this figure with Yila from my advisor's comments: …"
 
-Do not start a paid action (a figure, an edit, a deep search, full-text reading) during onboarding unless the user asked for it. Mention that paid actions use Yila credits and that each result reports what was charged.
+Do not start a figure or an edit during onboarding unless the user asked for one. Mention that figures use Yila credits (usually 300 each), charged only when the figure is saved, and that each result says what it charged.

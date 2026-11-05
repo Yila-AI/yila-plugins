@@ -2,7 +2,7 @@
   "mcpServers": {
     "yila": {
       "type": "http",
-      "url": "https://mcp.yila.ai/mcp"
+      "url": "https://yila.ai/api/mcp"
     }
   }
 }

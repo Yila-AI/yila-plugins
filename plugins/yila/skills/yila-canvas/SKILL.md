@@ -1,28 +1,25 @@
 ---
 name: yila-canvas
-description: Open a Yila project, canvas or figure in the host's built-in browser and work with what the user selected on it. Use after a Yila figure is ready, when the user wants to see or edit a figure, or when the user says "change this one" while the Yila canvas is open.
+description: Open a Yila project and its figure canvas in the host's built-in browser, or give the user a link to click. Use after a Yila figure is ready, or when the user wants to see or edit a Yila figure.
 ---
 
 # Open the Yila canvas
 
-## Open or refresh
+## Open
 
-Call `yila_open_in_browser` with the project (and the figure, when there is one). It returns a link that signs the browser in once and expires in about 5 minutes.
+Call `yila_open_in_browser` with the `figure_id` (or the `project_id`). It returns a link that signs the browser in to the user's Yila account once and opens the project's canvas, where every figure of the project is laid out. The link works once and expires in about 5 minutes.
 
-- Open the link in the host's built-in browser if the host has one. If the canvas is already open, refresh it instead of opening a second page.
-- **Never show this link in your reply, and never store it.** It signs in as the user. If the host has no browser, call `yila_open_in_browser` again and tell the user to open the new link themselves, right away.
-- If the page asks the user to sign in, the link has expired or was already used: request a new one.
+- If the host has a built-in browser, open the link there.
+- Otherwise give the link to the user right away and ask them to click it.
+- Do not fetch the link with HTTP or shell tools: that uses it up without showing anything.
+- If the page asks the user to sign in, the link expired or was already used: request a new one.
+
+After every new figure or revision, open a new link: a page that is already open does not refresh by itself.
 
 ## "Change this one"
 
-When the user points at something on the canvas, read the hidden state element before editing:
-
-```
-document.getElementById("yila-agent-state").textContent
-```
-
-It is JSON: the project, the selected figures (id, version, title) and the latest figure. Edit the selected figure with `yila_figure_edit`. If you cannot read the page, ask the user which figure they mean; do not guess.
+Use the `figure_id` of the figure the user means: the one you just made or revised, or one from `yila_job_list`. If it is unclear which figure they mean, ask; do not guess.
 
 ## What stays on the canvas
 
-Manual edits, element-level SVG editing, comparing versions and exporting editable PPTX or SVG all happen on the canvas. Point the user there rather than recreating these in the conversation.
+Manual edits, element-level editing, comparing versions and exporting editable PPTX or SVG happen on the canvas. Point the user there rather than recreating these in the conversation.

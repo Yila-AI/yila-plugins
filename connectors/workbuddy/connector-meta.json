@@ -2,31 +2,29 @@
   "name": "Yila",
   "name_zh": "Yila 科研助手",
   "name_en": "Yila",
-  "description": "Search, read and verify papers, format references, and draw editable scientific figures with Yila.",
-  "description_zh": "查中英文文献、读全文、核验引用、排参考文献（含 GB/T 7714），画能逐元素编辑的科研图。",
-  "description_en": "Search, read and verify papers, format references, and draw editable scientific figures with Yila.",
+  "description": "Draw scientific figures with Yila and edit them on the Yila canvas beside the conversation. Literature tools are coming soon.",
+  "description_zh": "用 Yila 画科研图（图形摘要、机制图、流程图），在 Yila 画布上接着改。文献检索、读全文和参考文献工具即将上线。",
+  "description_en": "Draw scientific figures with Yila and edit them on the Yila canvas beside the conversation. Literature tools are coming soon.",
   "source": "yila",
   "type": "mcp",
   "auth_mode": "server-side",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "minWorkbuddyVersion": "4.24.0",
   "examples_zh": [
-    "用 Yila 深度检索近五年肠道菌群与抑郁症的研究，包含中文文献",
-    "用 Yila 读这几篇论文的全文，比较样本量和主要结论，标出页码",
-    "核验这段综述里的每条引用，再按 GB/T 7714 排好参考文献",
-    "根据附件论文，用 Yila 画一张 16:9 的图形摘要"
+    "根据附件论文，用 Yila 画一张 16:9 的图形摘要",
+    "用 Yila 把这张机制图按导师的意见改一版：标题改短，配色换成深蓝",
+    "用 Yila 打开我刚才那张图的画布"
   ],
   "examples_en": [
-    "Use Yila to run a deep search on gut microbiota and depression from the last five years, including Chinese papers",
-    "Read the full text of these papers with Yila and compare sample sizes and main findings, with page numbers",
-    "Check every reference in this review and format them in GB/T 7714",
-    "Draw a 16:9 graphical abstract of the attached paper with Yila"
+    "Draw a 16:9 graphical abstract of the attached paper with Yila",
+    "Revise this mechanism figure with Yila from my advisor's comments: shorter title, dark blue colors",
+    "Open the Yila canvas for the figure we just made"
   ],
   "server_auth": {
     "auth_type": "mcp_oauth",
     "data": {
       "mcp_oauth": {
-        "server_url": "https://mcp.yila.ai/mcp"
+        "server_url": "https://yila.ai/api/mcp"
       }
     }
   }
