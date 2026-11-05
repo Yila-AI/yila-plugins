@@ -2,25 +2,27 @@
   "name": "Yila",
   "name_zh": "Yila 科研助手",
   "name_en": "Yila",
-  "description": "Draw and revise scientific figures on the Yila canvas, and search, check and format scholarly literature with Yila, inside your agent.",
-  "description_zh": "用 Yila 画科研图并在画布上接着改；查中英文文献、核验引用、按 2,800 多种格式（含 GB/T 7714）排参考文献，存进你的 Yila 文献库。",
-  "description_en": "Draw and revise scientific figures on the Yila canvas, and search, check and format scholarly literature with Yila, inside your agent.",
+  "description": "Draw and revise scientific figures on the Yila canvas, search, check and format scholarly literature, and hand whole research jobs to Yila, inside your agent.",
+  "description_zh": "用 Yila 画科研图并在画布上接着改；查中英文文献、核验引用、按 2,800 多种格式（含 GB/T 7714）排参考文献；把综述、PPT、海报这类整件事交给 Yila 跑。",
+  "description_en": "Draw and revise scientific figures on the Yila canvas, search, check and format scholarly literature, and hand whole research jobs to Yila, inside your agent.",
   "source": "yila",
   "type": "mcp",
   "auth_mode": "server-side",
-  "version": "0.2.0",
+  "version": "0.3.1",
   "minWorkbuddyVersion": "4.24.0",
   "examples_zh": [
     "根据附件论文，用 Yila 画一张 16:9 的图形摘要",
     "用 Yila 查近五年肠道菌群与抑郁症的论文，包括中文文献",
     "核验这段综述里的每条参考文献，再按 GB/T 7714 排好",
-    "用 Yila 把这张机制图按导师的意见改一版"
+    "用 Yila 把这张机制图按导师的意见改一版",
+    "让 Yila 写一篇带真实引用的文献综述，最多 1000 积分"
   ],
   "examples_en": [
     "Draw a 16:9 graphical abstract of the attached paper with Yila",
     "Find recent papers on gut microbiota and depression with Yila, including Chinese papers",
     "Check every reference in this review and format them in GB/T 7714",
-    "Revise this mechanism figure with Yila from my advisor's comments"
+    "Revise this mechanism figure with Yila from my advisor's comments",
+    "Have Yila write a literature review with real citations, at most 1,000 credits"
   ],
   "server_auth": {
     "auth_type": "mcp_oauth",
