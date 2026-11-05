@@ -6,7 +6,7 @@
 
 ## 中文
 
-在你的 AI 助手里用 [Yila](https://yila.ai) 做科研：画能在 Yila 画布上接着改的科研图，查中英文文献、核验引用、按 2,800 多种格式排参考文献，把综述、PPT、海报这类整件事交给 Yila 跑。用的是你自己的 Yila 账号和积分，不需要 API 密钥。
+在你的 AI 助手里用 [Yila](https://yila.ai) 做科研（[介绍页](https://yila.ai/zh/mcp)）：画能在 Yila 画布上接着改的科研图，查中英文文献、核验引用、按 2,800 多种格式排参考文献，把综述、PPT、海报这类整件事交给 Yila 跑。用的是你自己的 Yila 账号和积分，不需要 API 密钥。
 
 > **公测中。**功能和价格可能每周调整。遇到问题请在反馈群里说，或者提 [Issue](https://github.com/Yila-AI/yila-plugins/issues)。
 
@@ -79,7 +79,7 @@ connectors/workbuddy/              WorkBuddy 连接器包（草稿）
 
 ## English
 
-Use [Yila](https://yila.ai) for research inside your AI agent: draw scientific figures you keep editing on the Yila canvas, search English and Chinese literature, check references and format them in 2,800+ styles, and hand whole jobs such as a review, a deck or a poster to Yila. It uses your own Yila account and credits. No API key needed.
+Use [Yila](https://yila.ai) for research inside your AI agent ([overview](https://yila.ai/mcp)): draw scientific figures you keep editing on the Yila canvas, search English and Chinese literature, check references and format them in 2,800+ styles, and hand whole jobs such as a review, a deck or a poster to Yila. It uses your own Yila account and credits. No API key needed.
 
 > **Public beta.** Features and prices may change weekly. Report problems in the feedback group or open an [issue](https://github.com/Yila-AI/yila-plugins/issues).
 
