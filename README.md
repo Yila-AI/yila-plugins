@@ -6,7 +6,7 @@
 
 ## 中文
 
-在你的 AI 助手里用 [Yila](https://yila.ai) 做科研：画能在 Yila 画布上接着改的科研图，查中英文文献、核验引用、按 2,800 多种格式排参考文献。用的是你自己的 Yila 账号和积分，不需要 API 密钥。
+在你的 AI 助手里用 [Yila](https://yila.ai) 做科研：画能在 Yila 画布上接着改的科研图，查中英文文献、核验引用、按 2,800 多种格式排参考文献，把综述、PPT、海报这类整件事交给 Yila 跑。用的是你自己的 Yila 账号和积分，不需要 API 密钥。
 
 > **公测中。**功能和价格可能每周调整。遇到问题请在反馈群里说，或者提 [Issue](https://github.com/Yila-AI/yila-plugins/issues)。
 
@@ -27,7 +27,13 @@
 - 按 2,800 多种格式排参考文献，中文默认 GB/T 7714。
 - 把论文存进“我的文献库”，把笔记存进项目。
 
-**还没接入插件**：多步深度检索、读全文，目前在 Yila 网页里用。
+**整件事交给 Yila 跑**
+
+- 深度检索、带真实引用的完整综述、PPT、学术海报、数据分析：Yila 自己的研究 Agent 在你的账号里跑（网站的任务列表里能看到），跑完把回复和文件交回给你的助手。
+- 你给一个积分上限，按实际用量扣，到上限就暂停；跑完还能接着让它改。
+- Yila 中途提问时，在任务页里回答。
+
+**还没接入插件**：上传你自己的文件给 Yila 读，目前在 Yila 网页里用。
 
 ### 安装
 
@@ -46,7 +52,7 @@ Claude 网页版、ChatGPT 这类在云端连接的客户端还没有测试。
 
 ### 积分
 
-- 读论文、理解你的要求、写要点，用的是你自己 AI 助手的额度。Yila 只在这些成品上扣 Yila 积分，每次都告诉你扣了多少：画图或改图一般每张 300（图存进项目后才扣）；检索每个有结果的来源 30；核验每条 10。查找、排版、文献库和笔记免费。
+- 读论文、理解你的要求、写要点，用的是你自己 AI 助手的额度。Yila 只在这些成品上扣 Yila 积分，每次都告诉你扣了多少：画图或改图一般每张 300（图存进项目后才扣）；检索每个有结果的来源 30；核验每条 10；交给 Yila 的任务按实际用量扣，不超过你给的上限。查找、排版、文献库和笔记免费。
 - 同一个请求只扣一次；失败或取消的任务不扣积分。
 - 画出的图存在你自己的 Yila 账号里，在网页上能接着看、接着改。
 
@@ -56,7 +62,7 @@ Claude 网页版、ChatGPT 这类在云端连接的客户端还没有测试。
 .agents/plugins/marketplace.json   Codex 插件市场清单
 .claude-plugin/marketplace.json    Claude Code 插件市场清单
 AGENTS.md                          给“一句话安装”读的安装说明
-plugins/yila/                      插件本体：MCP 地址、图标和 4 篇 skill
+plugins/yila/                      插件本体：MCP 地址、图标和 5 篇 skill
 connectors/workbuddy/              WorkBuddy 连接器包（草稿）
 ```
 
@@ -72,7 +78,7 @@ connectors/workbuddy/              WorkBuddy 连接器包（草稿）
 
 ## English
 
-Use [Yila](https://yila.ai) for research inside your AI agent: draw scientific figures you keep editing on the Yila canvas, search English and Chinese literature, check references and format them in 2,800+ styles. It uses your own Yila account and credits. No API key needed.
+Use [Yila](https://yila.ai) for research inside your AI agent: draw scientific figures you keep editing on the Yila canvas, search English and Chinese literature, check references and format them in 2,800+ styles, and hand whole jobs such as a review, a deck or a poster to Yila. It uses your own Yila account and credits. No API key needed.
 
 > **Public beta.** Features and prices may change weekly. Report problems in the feedback group or open an [issue](https://github.com/Yila-AI/yila-plugins/issues).
 
@@ -93,7 +99,13 @@ Use [Yila](https://yila.ai) for research inside your AI agent: draw scientific f
 - Format references in 2,800+ styles, GB/T 7714 by default for Chinese.
 - Save papers to My Library and notes to the project.
 
-**Not yet in the plugin:** deep multi-step search and full-text reading; use them in the Yila web app for now.
+**Hand whole jobs to Yila**
+
+- A deep literature search, a full review with real citations, a slide deck, an academic poster, a data analysis: Yila's own research agent runs it in your account (it shows in your task list on the website) and hands its answer and files back to your agent.
+- You set a credit cap; the task is charged by actual usage and pauses at the cap. You can keep asking for changes afterwards.
+- When Yila asks a question along the way, you answer it on the task page.
+
+**Not yet in the plugin:** uploading your own files for Yila to read; use the Yila web app for now.
 
 ### Install
 
@@ -112,7 +124,7 @@ Cloud-connected clients such as Claude on the web and ChatGPT have not been test
 
 ### Credits
 
-- Reading papers, understanding your request and writing the outline use your own agent's quota. Yila charges Yila credits only for these results, and every result says what it charged: a figure or figure edit usually 300 (only once it is saved in your project); a search 30 for each source that returns papers; a reference check 10 each. Lookup, formatting, the library and notes are free.
+- Reading papers, understanding your request and writing the outline use your own agent's quota. Yila charges Yila credits only for these results, and every result says what it charged: a figure or figure edit usually 300 (only once it is saved in your project); a search 30 for each source that returns papers; a reference check 10 each; a task handed to Yila by actual usage, never above the cap you set. Lookup, formatting, the library and notes are free.
 - The same request is never charged twice; failed or cancelled jobs charge nothing.
 - Your figures stay in your own Yila account, ready to view and continue on the web.
 
@@ -122,7 +134,7 @@ Cloud-connected clients such as Claude on the web and ChatGPT have not been test
 .agents/plugins/marketplace.json   Codex plugin marketplace
 .claude-plugin/marketplace.json    Claude Code plugin marketplace
 AGENTS.md                          Install instructions for the one-line install
-plugins/yila/                      The plugin: MCP server URL, icon and 4 skills
+plugins/yila/                      The plugin: MCP server URL, icon and 5 skills
 connectors/workbuddy/              WorkBuddy connector package (draft)
 ```
 

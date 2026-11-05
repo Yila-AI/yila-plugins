@@ -1,7 +1,7 @@
 {
   "name": "yila",
-  "version": "0.2.0",
-  "description": "Draw and revise scientific figures on the Yila canvas, and search, check and format scholarly literature with Yila, inside your agent.",
+  "version": "0.3.0",
+  "description": "Draw and revise scientific figures on the Yila canvas, search, check and format scholarly literature, and hand whole research jobs to Yila, inside your agent.",
   "author": {
     "name": "Yila AI"
   },
@@ -9,7 +9,7 @@
   "interface": {
     "displayName": "Yila",
     "shortDescription": "Your research workbench and figure canvas, inside your agent.",
-    "longDescription": "Yila draws publication-quality scientific figures from the outline your agent writes and opens the editable Yila canvas in the host's built-in browser; it searches OpenAlex, PubMed, Google Scholar and Wanfang, resolves and checks references and formats them in 2,800+ styles including GB/T 7714, and saves papers and notes to your Yila account. Uses your Yila account and credits; no API key.",
+    "longDescription": "Yila draws publication-quality scientific figures from the outline your agent writes and opens the editable Yila canvas in the host's built-in browser; it searches OpenAlex, PubMed, Google Scholar and Wanfang, resolves and checks references and formats them in 2,800+ styles including GB/T 7714, saves papers and notes to your Yila account, and runs whole jobs (a deep literature review, a slide deck, a poster, a data analysis) with Yila's own research agent. Uses your Yila account and credits; no API key.",
     "developerName": "Yila AI",
     "category": "Research",
     "capabilities": [

@@ -1,6 +1,6 @@
 ---
 name: yila
-description: Yila 科研助手：画科研图并在画布上接着改，查中英文文献、核验引用、排参考文献。Use to draw scientific figures and to search, check and format literature with Yila.
+description: Yila 科研助手：画科研图并在画布上接着改，查中英文文献、核验引用、排参考文献，把综述、PPT、海报、数据分析整件交给 Yila 跑。Use to draw scientific figures, to search, check and format literature, and to hand whole research jobs to Yila.
 ---
 
 # Yila
@@ -12,4 +12,5 @@ Call `yila_get_orientation` once before other Yila tools; it returns the connect
 - To show a figure, call `yila_open_in_browser` and give the user the link to click right away (it works once and expires in about 5 minutes); `yila_figure_preview` gives a download link.
 - Errors: `QUOTE_EXCEEDS_MAX_CREDITS` → ask the user before raising `max_credits`; `INSUFFICIENT_CREDITS` → tell the user the balance and the plans link; `RATE_LIMITED` → wait for a running job to finish.
 - Literature: `yila_search_papers` (write the queries yourself; English for OpenAlex/PubMed/Google Scholar, Chinese concept groups for Wanfang; 30 credits per source that returns papers; page with offset and the same idempotency_key), `yila_lookup_papers` (DOIs, titles or a pasted list → CSL records, free), `yila_format_references` (GB/T 7714 by default for Chinese, free), `yila_verify_references` (10 credits each), `yila_library`, `yila_save_note`.
+- Whole jobs (a deep search or literature review, a slide deck, a poster, a data analysis): `yila_run_task` with a self-contained request and `max_credits` (a hard cap; ask the user before a large one), then wait with `yila_job_status` (`wait_seconds` 20; 5–30 minutes); continue with `yila_task_reply`. Yila's questions are answered on the task page (`yila_open_in_browser` with the task id).
 - Never invent results or references; cite only what Yila returned or the user gave you.

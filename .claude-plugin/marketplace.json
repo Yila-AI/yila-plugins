@@ -8,7 +8,7 @@
     {
       "name": "yila",
       "source": "./plugins/yila",
-      "description": "Draw and revise scientific figures on the Yila canvas, and search, check and format scholarly literature with Yila, inside your agent."
+      "description": "Draw and revise scientific figures on the Yila canvas, search, check and format scholarly literature, and hand whole research jobs to Yila, inside your agent."
     }
   ]
 }
