@@ -1,0 +1,14 @@
+{
+  "name": "yila-plugins",
+  "description": "Yila: research workbench and scientific figure canvas for your AI agent.",
+  "owner": {
+    "name": "Yila AI"
+  },
+  "plugins": [
+    {
+      "name": "yila",
+      "source": "./plugins/yila",
+      "description": "Search, read and verify papers, format references, and draw editable scientific figures with Yila."
+    }
+  ]
+}

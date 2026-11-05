@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "yila": {
+      "type": "streamableHttp",
+      "url": "https://mcp.yila.ai/mcp"
+    }
+  }
+}

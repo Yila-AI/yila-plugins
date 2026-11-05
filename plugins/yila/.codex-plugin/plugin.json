@@ -1,0 +1,27 @@
+{
+  "name": "yila",
+  "version": "0.1.0",
+  "description": "Search, read and verify papers, format references, and draw editable scientific figures with Yila, with the figure canvas open beside the conversation.",
+  "author": {
+    "name": "Yila AI"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Yila",
+    "shortDescription": "Your research workbench and figure canvas, inside your agent.",
+    "longDescription": "Deep literature search across English and Chinese sources, full-text reading with page citations, reference verification, references in 2,800+ styles including GB/T 7714, and publication-ready figures you can keep editing on the Yila canvas. Uses your Yila account and credits; no API key.",
+    "developerName": "Yila AI",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Connect to Yila, call yila_get_orientation, and introduce what Yila can do in my language."
+    ],
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png",
+    "logoDark": "./assets/icon.png"
+  },
+  "mcpServers": "./.mcp.json"
+}

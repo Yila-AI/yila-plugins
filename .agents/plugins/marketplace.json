@@ -1,0 +1,20 @@
+{
+  "name": "yila-plugins",
+  "interface": {
+    "displayName": "Yila"
+  },
+  "plugins": [
+    {
+      "name": "yila",
+      "source": {
+        "source": "local",
+        "path": "./plugins/yila"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "yila",
+  "version": "0.1.0",
+  "description": "Search, read and verify papers, format references, and draw editable scientific figures with Yila.",
+  "author": {
+    "name": "Yila AI"
+  },
+  "homepage": "https://yila.ai/mcp",
+  "license": "MIT"
+}
